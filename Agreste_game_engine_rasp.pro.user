@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE QtCreatorProject>
-<!-- Written by QtCreator 4.11.1, 2020-06-30T15:34:52. -->
+<!-- Written by QtCreator 4.11.1, 2020-06-30T17:44:43. -->
 <qtcreator>
  <data>
   <variable>EnvironmentId</variable>
@@ -285,8 +285,9 @@
     </valuelist>
     <value type="int" key="PE.EnvironmentAspect.Base">2</value>
     <valuelist type="QVariantList" key="PE.EnvironmentAspect.Changes"/>
-    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/joi/Reposítórios pessoais/Agreste_game_engine_rasp/Agreste_game_engine_rasp.pro</value>
-    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/joi/Reposítórios pessoais/Agreste_game_engine_rasp/Agreste_game_engine_rasp.pro</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.DisplayName">Agreste_game_engine_rasp2</value>
+    <value type="QString" key="ProjectExplorer.ProjectConfiguration.Id">Qt4ProjectManager.Qt4RunConfiguration:/home/joi/Reposítórios pessoais/Agreste-Game-Engine-Raspbian/Agreste_game_engine_rasp.pro</value>
+    <value type="QString" key="ProjectExplorer.RunConfiguration.BuildKey">/home/joi/Reposítórios pessoais/Agreste-Game-Engine-Raspbian/Agreste_game_engine_rasp.pro</value>
     <value type="QString" key="RunConfiguration.Arguments"></value>
     <value type="bool" key="RunConfiguration.Arguments.multi">false</value>
     <value type="QString" key="RunConfiguration.OverrideDebuggerStartup"></value>
