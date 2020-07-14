@@ -10,6 +10,10 @@
 // Other Libs
 #include "SOIL2/SOIL2.h"
 
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
+#include <glm/gtc/type_ptr.hpp>
+
 // Other includes
 #include "Headers/Shader.h"
 
@@ -31,7 +35,7 @@ int main( )
     glfwWindowHint( GLFW_RESIZABLE, GL_FALSE );
 
     // Create a GLFWwindow object that we can use for GLFW's functions
-    GLFWwindow *window = glfwCreateWindow( WIDTH, HEIGHT, "LearnOpenGL", nullptr, nullptr );
+    GLFWwindow *window = glfwCreateWindow( WIDTH, HEIGHT, "Agreste Game Engine", nullptr, nullptr );
 
     int screenWidth, screenHeight;
     glfwGetFramebufferSize( window, &screenWidth, &screenHeight );
@@ -63,7 +67,7 @@ int main( )
     glBlendFunc( GL_SRC_ALPHA, GL_ONE_MINUS_SRC_ALPHA );
 
     // Build and compile our shader program
-    Shader ourShader( "../Agreste-Game-Engine-Raspbian/Shaders/coreV.vs", "../Agreste-Game-Engine-Raspbian/Shaders/coreF.fs" );
+     Shader ourShader( "../Agreste-Game-Engine-Raspbian/Shaders/coreV.vs", "../Agreste-Game-Engine-Raspbian/Shaders/coreF.fs" );
 
     // Set up vertex data (and buffer(s)) and attribute pointers
     GLfloat vertices[] =
@@ -141,6 +145,16 @@ int main( )
 
         // Draw the triangle
         ourShader.Use( );
+
+        // Create transformations
+        glm::mat4 transform(1);
+        transform = glm::translate( transform, glm::vec3( 0.5f, -0.5f, 0.0f ) );
+        transform = glm::rotate( transform, ( GLfloat)glfwGetTime( ) * -5.0f, glm::vec3( 0.0f, 0.0f, 1.0f ) );
+
+        // Get matrix's uniform location and set matrix
+        GLint transformLocation = glGetUniformLocation( ourShader.Program, "transform" );
+        glUniformMatrix4fv( transformLocation, 1, GL_FALSE, glm::value_ptr( transform ) );
+
         glActiveTexture( GL_TEXTURE0 );
         glBindTexture( GL_TEXTURE_2D, texture );
         glUniform1i( glGetUniformLocation( ourShader.Program, "ourTexture" ), 0 );
