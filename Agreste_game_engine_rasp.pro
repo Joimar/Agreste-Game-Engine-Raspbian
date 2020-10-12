@@ -40,7 +40,8 @@ HEADERS += \
     SOIL2/stbi_pkm_c.h \
     SOIL2/stbi_pvr.h \
     SOIL2/stbi_pvr_c.h \
-    SOIL2/wfETC.h
+    SOIL2/wfETC.h \
+    camera.h
 
 DISTFILES += \
     Shaders/coreF.fs \
